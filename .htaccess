@@ -1,0 +1,10 @@
+Options +FollowSymLinks -Indexes
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f [OR]
+RewriteCond %{REQUEST_URI} !^/(webroot/.+|index.php|robots.txt)$
+RewriteRule ^ index.php [QSA,L]
+SetEnv db_user "damien"
+SetEnv db_pass "PETITnuage-26"
+SetEnv db_host "localhost"
+SetEnv db_name "mvc"
